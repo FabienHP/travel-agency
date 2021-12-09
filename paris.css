@@ -1,0 +1,239 @@
+/* Header */
+
+.header-paris {
+    display: flex;
+    color: #434749;
+    margin-bottom: 1rem;
+}
+
+.header-paris > div {
+    width: 55%;
+}
+
+.header-paris .zoom-image {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+}
+
+.zoom-image > img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    margin-bottom: 0.5rem;
+}
+
+.zoom-image .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(96px, max-content));
+    grid-gap: 0.5rem;
+    padding: 0 0.5rem;
+}
+
+.zoom-image .gallery > .desti {
+    max-width: 96px;
+    height: 54px;
+    margin: 0 0 0.5rem;
+}
+
+.zoom-image .gallery > .desti > .img > img, .zoom-image > .gallery > .desti > .img {
+    height: 54px;
+}
+
+.zoom-image .gallery .desti .hover-image {
+    display: none;
+    height: 54px;
+}
+
+.zoom-image .gallery .desti .img:hover + .hover-image, .zoom-image .gallery .desti .hover-image:hover {
+    display: flex;
+    background-color: rgba(0,0,0,.5);
+    align-items: center;
+    justify-content: center;
+}
+
+.desc-desti {
+    padding: 1.5rem;
+}
+
+.desc-desti h2{  
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.desc-desti .flex {
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.desc-desti h3 {
+    font-weight: bold;
+    margin-right: 0.5rem;
+}
+
+.desc-desti em {
+    font-size: 0.9rem;
+    font-style: italic;
+    font-weight: 600;
+}
+
+.desc-desti p {
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+    word-spacing: 0.2rem;
+    line-height: 1.5rem;
+}
+
+.desc-desti .details {
+    margin-top: 1rem;
+    margin-right: -1.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.desc-desti .details a {
+    background-color: #FF5F2E;
+    color: #ffff;
+    padding: 0.4rem 2.5rem;
+    border-radius: 2px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    align-self: center;
+}
+
+.desc-desti .details span{
+    font-weight: bold;
+    font-size: 1.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 4px 0 0 4px;
+    background-color: #FCBE32;
+}
+
+/* Content */
+
+.banner {
+    width: 100%;
+    position: relative;
+    color: rgba(255,255,255,.8);
+}
+
+.banner .img, .banner img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.banner .hover-image {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(0,0,0,.6);
+}
+
+.banner h2 {
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+.text {
+    box-sizing: border-box;
+    padding: 1rem;
+    color: #434749;
+}
+
+.text .paragraph {
+    margin-bottom: 1.5rem;
+}
+
+.text .paragraph .bg {
+    background-color: #FF5F2E;
+    padding-left: 0.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.text .paragraph {
+    font-size: 0.9rem;
+    line-height: 1.5rem;
+}
+
+.text .paragraph h3 {
+    background-color: #FFFF;
+    font-size: 1.5rem;
+    padding: 0.5rem 0.5rem;
+    font-weight: bold;
+}
+
+.text .paragraph a {
+    color: #004E66;
+    text-decoration: none;
+}
+
+.text .paragraph ul {
+    margin-left: 2.5rem;
+}
+
+.also-like .gallery {
+    flex-wrap: nowrap;
+}
+
+.also-like .gallery .desti {
+    margin: 0 0.5rem 1.5rem;
+    max-width: none;
+}
+
+@media only screen and (max-width: 990px) {
+
+    /* Header */
+
+    .header-paris {
+        flex-direction: column-reverse;
+    }
+    
+    .header-paris > div {
+        width: 100%;
+    }
+    
+    .header-paris .zoom-image {
+        width: 100%;
+    }
+
+    .desc-desti {
+        box-sizing: border-box;
+        position: relative;
+    }
+
+    .desc-desti .details {
+        margin-right: 0;
+    }
+
+    .desc-desti .details a {
+        text-align: center;
+        width: 100%;
+    }
+
+    .desc-desti .details span {
+        position: absolute;
+        top: 1.5rem;
+        right: 1.5rem;
+        border-radius: 4px;
+    }
+
+    /* Content */
+
+    .also-like .gallery {
+        flex-wrap: wrap;
+    }
+
+    .also-like .gallery .desti {
+        margin: 0 0 1.5rem;
+        max-width: none;
+    }
+
+}

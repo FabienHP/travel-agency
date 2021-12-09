@@ -1,0 +1,31 @@
+/* Contact */
+
+.contact {
+    display: flex;
+}
+
+.contact > div {
+    width: 50%;
+}
+
+.contact > .div-form  {
+    background-color: #FFFF;
+    color: #434749;
+    font-weight: bold;
+    margin: 0;
+}
+
+@media only screen and (max-width: 990px) {
+    .contact {
+        flex-direction: column;
+    }
+
+    .contact > div {
+        width: 100%;
+    }
+
+    .contact > .div-form > .div-button a  {
+        width: 100%;
+        text-align: center;
+    }
+}
